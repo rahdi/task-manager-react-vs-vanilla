@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
+    <title>Task Manager Vanilla JS</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
-      <h1>Task Manager</h1>
-
-      <input type="text" id="descriptionInput" placeholder="Task description" />
-      <input type="date" id="dueDateInput" />
-
-      <button id="addButton">Add Task</button>
-
+    <div id="root">
       <div>
-        <button id="allButton">All</button>
-        <button id="completedButton">Completed</button>
-        <button id="pendingButton">Pending</button>
-      </div>
+        <h1>Task Manager</h1>
 
-      <ul id="taskList"></ul>
+        <input
+          type="text"
+          id="descriptionInput"
+          placeholder="Task description"
+        />
+        <input type="date" id="dueDateInput" />
+
+        <button id="addButton">Add Task</button>
+
+        <div>
+          <button id="allButton">All</button>
+          <button id="completedButton">Completed</button>
+          <button id="pendingButton">Pending</button>
+        </div>
+
+        <ul id="taskList"></ul>
+      </div>
     </div>
 
     <script src="app.js"></script>

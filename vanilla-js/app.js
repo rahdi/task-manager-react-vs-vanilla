@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filteredTasks.forEach((task, index) => {
       const listItem = document.createElement("li");
-      listItem.textContent = `${task.description} - ${task.dueDate}`;
+      const span = document.createElement("span");
+      span.textContent = `${task.description} - ${task.dueDate}`;
       const toggleButton = document.createElement("button");
       toggleButton.textContent = task.completed ? "Undo" : "Complete";
       toggleButton.addEventListener("click", () => {
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saveTasks();
         renderTasks();
       });
+      listItem.appendChild(span);
       listItem.appendChild(toggleButton);
       taskList.appendChild(listItem);
     });
